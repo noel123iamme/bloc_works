@@ -11,7 +11,7 @@ class BlocWorksTest < Test::Unit::TestCase
 
   def test_blocworks_application_call
     get "/"
-    puts "last_request: #{last_request}"
+    # puts "last_request: #{last_request}"
     assert_equal "Hello Blocheads!", last_response.body
     assert last_response.ok?
   end
