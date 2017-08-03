@@ -1,0 +1,9 @@
+ActionPack:  This provides methods for routing in the rails app. This is the framework for defining the controllers and generating views
+
+ActiveModel: This provides model-like APIs to allow ActionPack to interact with non-ActiveRecord models.  This helps build custom ORMs and adds helpers to ActiveRecord models.
+
+ActiveRecord: Is the ORM in Rails. This provides a base class that maps to a relational database table.
+
+ActiveSupport:  This provides a set of useful utility classes.  Looked through some these.  I wasn't really sure how useful these would be to me at this time. Lol.  Maybe encoding/decoding JSON or XML and ArrayInquirer.
+
+ActionMailer:  This provides a standard framework that provides methods for handling incoming and outgoing emails.
