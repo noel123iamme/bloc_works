@@ -1,5 +1,5 @@
 require "rack/test"
-require "test-unit"
+require "test/unit"
 require "bloc_works"
 
 class BlocWorksTest < Test::Unit::TestCase
@@ -11,9 +11,7 @@ class BlocWorksTest < Test::Unit::TestCase
 
   def test_blocworks_application_call
     get "/"
-    # puts "last_request: #{last_request}"
     assert_equal "Hello Blocheads!", last_response.body
     assert last_response.ok?
   end
-
 end
