@@ -13,8 +13,19 @@ module BlocWorks
 	    else
 	    	template = "view not found: #{view}"
 	    end
+
+      # puts "instanc variables: #{self.instance_variables}"
+      attribs = Hash[self.instance_variables.map{ |var| 
+        ["#{var.to_s}", self.instance_variable_get(var.to_s)] 
+      }]
+      # should have been this...
+      # self.instance_variables.each do |var|
+      #   locals[var] = self.instance_variable_get(var)
+      # end
+      # puts "attribs: #{attribs}"
+
       eruby = Erubis::Eruby.new(template)
-      eruby.result(locals.merge(env: @env))
+      eruby.result(locals.merge(attribs))
     end
 
     def controller_dir
