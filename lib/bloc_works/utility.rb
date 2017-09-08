@@ -7,5 +7,3 @@ module BlocWorks
     string.downcase
   end
 end
-
-

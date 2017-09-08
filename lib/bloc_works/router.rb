@@ -9,5 +9,3 @@ module BlocWorks
     end
   end
 end
-
-
